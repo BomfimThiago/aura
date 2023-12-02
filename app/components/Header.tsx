@@ -16,19 +16,8 @@ import { Subtitle } from "./Subtitle"
 
 import { usePathname } from 'next/navigation';
 import { getFormattedDate } from "../[utils]/utils"
-import { UserCircleIcon} from "@heroicons/react/20/solid"
 import { KeyValuePair } from "tailwindcss/types/config"
 import  { ProfileSettings }  from "./ProfileSettings"
-
-// const HeaderDropDown = ({classname}:{classname?: string}) => {
-//   const [showLinks, setShowLinks]= useState(false)
-//   return <button onClick={() => setShowLinks(!showLinks)} className={classname}>
-//     {showLinks && <ul>
-//       <li>Teste</li>
-//       <li>Teste 2</li>
-//     </ul>} <Bars4Icon  width={30} className="text-auraRed" />
-//   </button>
-// }
 
 
 const matchTitle: KeyValuePair  = {

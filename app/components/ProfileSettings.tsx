@@ -7,6 +7,7 @@ import tw from 'tailwind-styled-components';
 import { ArrowLeftOnRectangleIcon }from '@heroicons/react/24/solid';
 import { useRouter } from 'next/navigation'
 import { toast } from 'react-toastify';
+import Cookies from 'js-cookie';
 
 
 export const ProfileSettings = () => {
@@ -18,24 +19,8 @@ export const ProfileSettings = () => {
     };
 
     const onLogOut = async (event: any) => {
-      event.preventDefault()
-      const response = await fetch(`http://localhost:5099/api/auth/logout`, {
-          method: 'POST',
-          credentials: 'include',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-      })
-      
-      const data = await response.json()
-      if (response.ok) {
-          // Login successful, redirect to the desired page
-          router.push('/login'); // Replace with your desired redirect path
-      } else {
-          // Handle login failure
-          toast.error(`${response.status} ${data.message}`)
-      }
+      Cookies.remove('accessToken') 
+      router.push('/login'); // Replace with your desired redirect path
     }
 
 
