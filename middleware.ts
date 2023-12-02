@@ -3,9 +3,9 @@ import { NextRequest, NextResponse } from "next/server";
 
 export function middleware(req: NextRequest, res: NextResponse) {
 
-    if (req.nextUrl.pathname === '/') {
-        return NextResponse.rewrite(new URL('/dashboard', req.nextUrl.href));
-    }
+    // if (req.nextUrl.pathname === '/') {
+    //     return NextResponse.rewrite(new URL('/dashboard', req.nextUrl.href));
+    // }
 
     const cookieName = 'accessToken'
 
