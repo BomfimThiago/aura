@@ -21,7 +21,7 @@ export default function Login ()  {
 
     const onLogin = async (event: any) => {
         event.preventDefault()
-        const response = await fetch(`http://168.75.102.81:5000/api/auth/login`, {
+        const response = await fetch(`https://168.75.102.81:5000/api/auth/login`, {
             method: 'POST',
             headers: {
               'Accept': 'application/json',
